@@ -17,6 +17,7 @@
   > with
   >
   > ```dart
+  > // The extension with the isIOS getter is exported from here
   > import 'package:flutter_adaptive/platform.dart';
   >
   > context.isIOS;
