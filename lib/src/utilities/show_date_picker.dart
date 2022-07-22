@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,7 +23,7 @@ Future<DateTime?> showDatePicker({
             return Column(
               children: [
                 () {
-                  if (adaptive.isIOS) {
+                  if (context.isIOS) {
                     return SizedBox(
                       height: MediaQuery.of(context).size.height / 4,
                       child: CupertinoTheme(

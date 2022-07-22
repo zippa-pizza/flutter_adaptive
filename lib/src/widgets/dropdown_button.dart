@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 
 /// An adaptive dropdown button.
 ///
@@ -26,7 +27,7 @@ class DropdownButton<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       final adaptive.DropdownMenuItem<T>? initialItem =
           items.firstWhereOrNull((item) => item.value == value);
 
@@ -38,7 +39,7 @@ class DropdownButton<T> extends StatelessWidget {
         ),
         child: adaptive.Button(
           icon: Icon(
-            adaptive.Icons.arrowDropDown,
+            adaptive.Icons.arrowDropDown(context),
             color: IconTheme.of(context).color,
           ),
           text: initialItem?.label ?? hint,

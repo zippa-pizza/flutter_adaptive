@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -52,7 +53,7 @@ class SwitchListTile extends StatelessWidget {
                 );
               },
             ),
-            onTap: !adaptive.isIOS ? () => _onChanged(context, !value) : null,
+            onTap: !context.isIOS ? () => _onChanged(context, !value) : null,
           );
         },
       ),

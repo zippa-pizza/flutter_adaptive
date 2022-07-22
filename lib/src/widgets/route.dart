@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 import 'package:flutter_adaptive/src/widgets/flexible_space_bar.dart';
@@ -60,7 +61,7 @@ class Route extends StatelessWidget {
               .copyWith(statusBarColor: Colors.transparent),
     );
 
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       final String previousPageTitle = this.previousPageTitle ??
           onGeneratePreviousPageTitle?.call(context) ??
           PackageLocalizations.of(context).back;

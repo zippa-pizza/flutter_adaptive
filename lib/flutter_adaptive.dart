@@ -2,12 +2,12 @@
 library flutter_adaptive;
 
 import 'package:flutter/widgets.dart';
-import 'src/widgets/_.dart';
+import 'package:flutter_adaptive/platform.dart';
 
 export 'src/utilities/show_action_sheet.dart';
 export 'src/utilities/show_date_picker.dart';
 export 'src/utilities/show_dialog.dart';
-export 'src/widgets/_.dart';
+
 export 'src/widgets/bottom_navigation_bar.dart';
 export 'src/widgets/button.dart';
 export 'src/widgets/dropdown_button.dart';
@@ -25,5 +25,6 @@ export 'src/widgets/tap_area.dart';
 export 'src/widgets/text_field.dart';
 export 'src/widgets/toggle_buttons.dart';
 
-final ScrollPhysics scrollPhysics =
-    isIOS ? const BouncingScrollPhysics() : const ClampingScrollPhysics();
+ScrollPhysics scrollPhysics(BuildContext context) => context.isIOS
+    ? const BouncingScrollPhysics()
+    : const ClampingScrollPhysics();

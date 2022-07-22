@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 
 /// Shows a dialog
 Future<T?> showDialog<T>({
@@ -10,7 +11,7 @@ Future<T?> showDialog<T>({
   String? content,
   bool? barrierDismissible,
 }) {
-  if (adaptive.isIOS) {
+  if (context.isIOS) {
     return showCupertinoDialog<T>(
       context: context,
       barrierDismissible: barrierDismissible ?? false,

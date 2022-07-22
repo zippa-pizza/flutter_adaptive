@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -57,7 +58,7 @@ class ExpansionTile extends StatelessWidget {
       );
     }
 
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       return _IosExpansionTile(
         tileKey: tileKey,
         initiallyExpanded: initiallyExpanded,
@@ -157,7 +158,7 @@ class _IosExpansionTileState extends State<_IosExpansionTile>
                   subtitle: widget.subtitle,
                   trailing: RotationTransition(
                     turns: _arrow,
-                    child: Icon(adaptive.Icons.expandMore),
+                    child: Icon(adaptive.Icons.expandMore(context)),
                   ),
                   onTap: () {
                     isExpanded ? _controller.reverse() : _controller.forward();

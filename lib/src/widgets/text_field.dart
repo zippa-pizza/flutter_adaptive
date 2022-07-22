@@ -2,7 +2,7 @@ import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/services.dart';
-import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -59,7 +59,7 @@ class TextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       return BlocProvider<SimpleValueBloc<String?>>(
         create: (_) => SimpleValueBloc(controller?.text),
         child: Column(

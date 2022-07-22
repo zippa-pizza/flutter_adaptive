@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
-import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/widgets/cupertino_list_tile.dart';
 
@@ -49,7 +49,7 @@ class ListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       final EdgeInsets listTileContentPadding = material.Theme.of(context)
           .listTileTheme
           .contentPadding!

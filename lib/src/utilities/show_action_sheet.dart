@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 
 /// Shows an action sheet.
@@ -8,7 +9,7 @@ Future<void> showActionSheet({
   required BuildContext context,
   required List<ActionSheetItem> items,
 }) {
-  if (adaptive.isIOS) {
+  if (context.isIOS) {
     return showCupertinoModalPopup(
       context: context,
       builder: (context) => CupertinoTheme(

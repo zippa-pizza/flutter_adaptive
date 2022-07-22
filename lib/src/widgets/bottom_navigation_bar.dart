@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
-import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 
 /// An adaptive bottom navigation bar.
 ///
@@ -22,7 +22,7 @@ class BottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       return CupertinoTabBar(
         items: items,
         currentIndex: currentIndex,

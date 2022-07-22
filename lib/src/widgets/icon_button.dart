@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 
 /// An adaptive icon button.
 ///
@@ -27,7 +28,7 @@ class IconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       return SizedBox.square(
         dimension: iconSize * 2,
         child: IconTheme(

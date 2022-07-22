@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
-import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:resolve_font_height/resolve_font_height.dart';
 
 /// An adaptive toggle buttons widget.
@@ -33,7 +33,7 @@ class ToggleButtons extends StatelessWidget {
         10 + // Top padding
         10; // Bottom padding
 
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       const double minControlSize = 28;
 
       itemHeight =
@@ -49,7 +49,7 @@ class ToggleButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       return Padding(
         padding: const EdgeInsets.all(4),
         child: CupertinoSlidingSegmentedControl<int>(

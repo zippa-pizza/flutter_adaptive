@@ -11,7 +11,7 @@ class App extends StatelessWidget {
       child: SliverList(
         delegate: SliverChildListDelegate([
           adaptive.ListTile(
-            leading: Icon(adaptive.Icons.info),
+            leading: Icon(adaptive.Icons.info(context)),
             title: const Text('About'),
             onTap: () => showAboutDialog(context: context),
           ),

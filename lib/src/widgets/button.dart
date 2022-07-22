@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
+import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/config/config.dart';
 
 /// An adaptive button.
@@ -60,7 +60,7 @@ class Button extends StatelessWidget {
   }
 
   Widget buildButton(BuildContext context) {
-    if (adaptive.isIOS) {
+    if (context.isIOS) {
       final Color finalForegroundColor = foregroundColor ??
           Theme.of(context)
               .textButtonTheme
