@@ -31,7 +31,7 @@ A series of widgets and utilities that adapt to the current platform.
 as without it you may encounter issues with other Flutter imports (like `material`).
 
 ```dart
-import 'package:flutter_adaptive/flutter_adaptive' as adaptive;
+import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 ```
 
 ## Additional information
