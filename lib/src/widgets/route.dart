@@ -7,6 +7,12 @@ import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 import 'package:flutter_adaptive/src/widgets/flexible_space_bar.dart';
 
+/// This will be called whenever the [adaptive.Route]'s previousPageTitle
+/// needs to be generated.
+///
+/// This will not take precedence if previousPageTitle is non-null.
+String? Function(BuildContext context)? onGeneratePreviousPageTitle;
+
 /// An adaptive route.
 ///
 /// **IMPORTANT**: the [child] must be a widget that implements the sliver
@@ -55,6 +61,10 @@ class Route extends StatelessWidget {
     );
 
     if (adaptive.isIOS) {
+      final String previousPageTitle = this.previousPageTitle ??
+          onGeneratePreviousPageTitle?.call(context) ??
+          PackageLocalizations.of(context).back;
+
       return Scaffold(
         body: SafeArea(
           top: false,
@@ -78,8 +88,7 @@ class Route extends StatelessWidget {
                             title,
                             style: TextStyle(fontFamily: fontFamily(context)),
                           ),
-                          previousPageTitle: previousPageTitle ??
-                              PackageLocalizations.of(context).back,
+                          previousPageTitle: previousPageTitle,
                           trailing: IconTheme(
                             data: IconTheme.of(context).copyWith(
                               color: DefaultTextStyle.of(context).style.color,
