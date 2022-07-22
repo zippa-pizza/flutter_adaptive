@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 
+/// An adaptive dropdown button.
+///
+/// - `Android`: a [material.DropdownButton] is used
+/// - `iOS`: a [CupertinoPicker] is used
 class DropdownButton<T> extends StatelessWidget {
   final T? value;
 

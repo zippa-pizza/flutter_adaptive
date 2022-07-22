@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 
+/// An adaptive icon button.
+///
+/// - `Android`: a [material.IconButton] is used
+/// - `iOS`: a custom widget is used
 class IconButton extends StatelessWidget {
   final Widget icon;
   final double iconSize;

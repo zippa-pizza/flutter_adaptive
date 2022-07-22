@@ -5,6 +5,7 @@ import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// Shows a date picker.
 Future<DateTime?> showDatePicker({
   required BuildContext context,
   required DateTime firstDate,

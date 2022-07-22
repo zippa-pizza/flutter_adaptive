@@ -6,6 +6,10 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:resolve_font_height/resolve_font_height.dart';
 
+/// An adaptive toggle buttons widget.
+///
+/// - `Android`: a [material.ToggleButtons] widget is used
+/// - `iOS`: a [CupertinoSlidingSegmentedControl] is used
 class ToggleButtons extends StatelessWidget {
   final int currentIndex;
 

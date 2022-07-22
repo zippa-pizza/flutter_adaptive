@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 
+/// Shows an action sheet.
 Future<void> showActionSheet({
   required BuildContext context,
   required List<ActionSheetItem> items,

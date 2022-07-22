@@ -3,9 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/config/config.dart';
 
+/// An adaptive button.
+///
+/// - `Android`: a [TextButton] is used
+/// - `iOS`: a [CupertinoButton] is used
 class Button extends StatelessWidget {
   final Widget? icon;
   final String? text;
+
+  /// If non-null [icon] and [text] will be ignored.
   final Widget? child;
 
   final String? tooltip;

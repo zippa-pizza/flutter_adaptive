@@ -6,6 +6,10 @@ import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/bloc/simple_value/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// An adaptive text field.
+///
+/// - `Android`: a [material.TextField] is used
+/// - `iOS`: a [CupertinoTextField] is used
 class TextField extends StatelessWidget {
   final Key? fieldKey;
 

@@ -6,6 +6,10 @@ import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/widgets/cupertino_list_tile.dart';
 
+/// An adaptive list tile.
+///
+/// - `Android`: a [ListTile] is used
+/// - `iOS`: a custom [CupertinoListTile] is used
 class ListTile extends StatelessWidget {
   final Widget? leading;
   final Widget? title;

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/// An adaptive spinner.
+///
+/// - `Android`: a [CircularProgressIndicator.adaptive] is used
+/// - `iOS`: a [CircularProgressIndicator.adaptive] is used
 class Spinner extends StatelessWidget {
   final double? size;
   final double thickness;

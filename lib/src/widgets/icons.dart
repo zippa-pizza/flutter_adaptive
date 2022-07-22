@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 
+/// An series of icons that adapt to the current platform's look.
+///
+/// Some icons for iOS are from the material icons collection as they might
+/// not have an equivalent in the cupertino one.
 class Icons {
   static final bool _isIOS = adaptive.isIOS;
 

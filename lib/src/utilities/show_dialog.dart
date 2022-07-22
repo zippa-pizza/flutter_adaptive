@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 
+/// Shows a dialog
 Future<T?> showDialog<T>({
   required BuildContext context,
   required List<DialogAction> actions,

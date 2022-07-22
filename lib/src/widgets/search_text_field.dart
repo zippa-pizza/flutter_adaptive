@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 
+/// An adaptive search text field.
+///
+/// - `Android`: a [TextField] is used
+/// - `iOS`: a [CupertinoSearchTextField] is used
 class SearchTextField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;

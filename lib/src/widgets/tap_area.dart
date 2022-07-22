@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 
+/// An adaptive tap area.
+///
+/// - `Android`: a [adaptive.Button] is used
+/// - `iOS`: a [adaptive.Button] is used
 class TapArea extends StatelessWidget {
   final Widget child;
 

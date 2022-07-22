@@ -7,6 +7,10 @@ import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 import 'package:flutter_adaptive/src/widgets/flexible_space_bar.dart';
 
+/// An adaptive route.
+///
+/// **IMPORTANT**: the [child] must be a widget that implements the sliver
+/// protocol, such as [SliverList].
 class Route extends StatelessWidget {
   final String title;
 

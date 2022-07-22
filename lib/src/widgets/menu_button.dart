@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
 
+/// An adaptive menu button.
+///
+/// - `Android`: a [PopupMenuButton] is used
+/// - `iOS`: a [adaptive.IconButton] is used
 class MenuButton extends StatelessWidget {
   final List<adaptive.ActionSheetItem> items;
 
