@@ -21,7 +21,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
-  resolve_font_height: ^1.0.1
+  resolve_font_height: ^1.0.2
 
 dev_dependencies:
   flutter_test:
