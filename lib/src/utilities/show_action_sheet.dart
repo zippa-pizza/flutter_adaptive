@@ -45,8 +45,10 @@ Future<void> showActionSheet({
 
   return showModalBottomSheet(
     context: context,
+    useRootNavigator: true,
     builder: (context) {
       return Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ...items.map(
             (item) => adaptive.ListTile(
