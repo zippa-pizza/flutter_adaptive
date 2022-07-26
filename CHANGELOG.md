@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Fix issues with `showDatePicker()` and `showActionSheet()`
+
 ## 2.0.0
 
 **BREAKING CHANGES:**
