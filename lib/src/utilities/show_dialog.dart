@@ -39,6 +39,7 @@ Future<T?> showDialog<T>({
       return material.AlertDialog(
         title: title != null ? Text(title) : null,
         content: content != null ? Text(content) : null,
+        actionsOverflowButtonSpacing: 8,
         actions: actions.map((action) {
           return material.Theme(
             data: material.Theme.of(context).copyWith(
@@ -55,7 +56,6 @@ Future<T?> showDialog<T>({
               ),
             ),
             child: adaptive.Button(
-              text: action.title,
               foregroundColor: !action.isPrimary
                   ? material.Theme.of(context)
                       .textButtonTheme
@@ -66,6 +66,7 @@ Future<T?> showDialog<T>({
               backgroundColor:
                   !action.isPrimary ? material.Colors.transparent : null,
               onPressed: () => action.onPressed?.call(dialogContext),
+              child: Text(action.title, textAlign: TextAlign.end),
             ),
           );
         }).toList(),
