@@ -1,3 +1,7 @@
+## 2.1.0
+
+- Add vertical spacing to dialog buttons for when they are placed vertically
+
 ## 2.0.1
 
 - Fix issues with `showDatePicker()` and `showActionSheet()`
