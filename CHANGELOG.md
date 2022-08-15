@@ -1,4 +1,10 @@
+## 2.2.1
+
+- Updated changelog
+
 ## 2.2.0
+
+**BREAKING CHANGES:**
 
 - Moved `Icons` class in a separate package (`adaptive_icons`)
 
