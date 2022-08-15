@@ -1,3 +1,7 @@
+## 2.2.0
+
+- Moved `Icons` class in a separate package (`adaptive_icons`)
+
 ## 2.1.0
 
 - Add vertical spacing to dialog buttons for when they are placed vertically

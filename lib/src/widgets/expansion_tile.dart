@@ -1,3 +1,4 @@
+import 'package:adaptive_icons/adaptive_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
@@ -158,7 +159,7 @@ class _IosExpansionTileState extends State<_IosExpansionTile>
                   subtitle: widget.subtitle,
                   trailing: RotationTransition(
                     turns: _arrow,
-                    child: Icon(adaptive.Icons.expandMore(context)),
+                    child: Icon(AdaptiveIcons(context).expandMore),
                   ),
                   onTap: () {
                     isExpanded ? _controller.reverse() : _controller.forward();

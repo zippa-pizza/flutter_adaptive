@@ -14,7 +14,6 @@ export 'src/widgets/dropdown_button.dart';
 export 'src/widgets/dropdown_menu_item.dart';
 export 'src/widgets/expansion_tile.dart';
 export 'src/widgets/icon_button.dart';
-export 'src/widgets/icons.dart';
 export 'src/widgets/list_tile.dart';
 export 'src/widgets/menu_button.dart';
 export 'src/widgets/route.dart';

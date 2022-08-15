@@ -1,3 +1,4 @@
+import 'package:adaptive_icons/adaptive_icons.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
@@ -39,7 +40,7 @@ class DropdownButton<T> extends StatelessWidget {
         ),
         child: adaptive.Button(
           icon: Icon(
-            adaptive.Icons.arrowDropDown(context),
+            AdaptiveIcons(context).arrowDropDown,
             color: IconTheme.of(context).color,
           ),
           text: initialItem?.label ?? hint,
