@@ -1,7 +1,7 @@
 name: flutter_adaptive
 description: A series of widgets and utilities that adapt to the current platform.
 
-version: 2.2.1
+version: 2.3.0
 
 homepage: https://github.com/zippa-pizza/flutter_adaptive
 repository: https://github.com/zippa-pizza/flutter_adaptive

@@ -1,3 +1,7 @@
+## 2.3.0
+
+- On iOS `ListTile`s no longer have a `maxLines` limit set to 1
+
 ## 2.2.1
 
 - Updated changelog
