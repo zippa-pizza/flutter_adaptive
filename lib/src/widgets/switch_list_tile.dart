@@ -38,10 +38,8 @@ class SwitchListTile extends StatelessWidget {
           return adaptive.ListTile(
             enabled: onChanged != null,
             leading: secondary,
-            title: Text(title, maxLines: double.maxFinite.toInt()),
-            subtitle: subtitle != null
-                ? Text(subtitle!, maxLines: double.maxFinite.toInt())
-                : null,
+            title: Text(title),
+            subtitle: subtitle != null ? Text(subtitle!) : null,
             trailing: BlocBuilder<SimpleValueBloc<bool>, bool>(
               builder: (context, isLoading) {
                 final bool isEnabled = !isLoading && onChanged != null;

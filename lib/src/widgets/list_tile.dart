@@ -74,8 +74,26 @@ class ListTile extends StatelessWidget {
           onLongPress: enabled ? onLongPress : null,
           child: CupertinoListTile.notched(
             leading: leading,
-            title: title!,
-            subtitle: subtitle,
+            title: Builder(
+              builder: (context) {
+                return DefaultTextStyle(
+                  style: DefaultTextStyle.of(context).style,
+                  maxLines: double.maxFinite.toInt(),
+                  child: title!,
+                );
+              },
+            ),
+            subtitle: subtitle != null
+                ? Builder(
+                    builder: (context) {
+                      return DefaultTextStyle(
+                        style: DefaultTextStyle.of(context).style,
+                        maxLines: double.maxFinite.toInt(),
+                        child: subtitle!,
+                      );
+                    },
+                  )
+                : null,
             trailing: trailing is Icon &&
                     (trailing! as Icon).icon == CupertinoIcons.chevron_right
                 ? const CupertinoListTileChevron()
