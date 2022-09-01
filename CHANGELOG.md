@@ -1,3 +1,12 @@
+## 3.0.0
+
+> This version requires Flutter 3.3.0 or greater
+
+**BREAKING CHANGES:**
+
+- Replaced custom flexible space bar with `SliverAppBar.large`
+- Add support for Flutter 3.3.0
+
 ## 2.3.0
 
 - On iOS `ListTile`s no longer have a `maxLines` limit set to 1
