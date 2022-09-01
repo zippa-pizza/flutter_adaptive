@@ -1,7 +1,7 @@
 name: flutter_adaptive
 description: A series of widgets and utilities that adapt to the current platform.
 
-version: 2.3.0
+version: 3.0.0
 
 homepage: https://github.com/zippa-pizza/flutter_adaptive
 repository: https://github.com/zippa-pizza/flutter_adaptive
@@ -12,16 +12,16 @@ platforms:
   web:
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
-  flutter: ">=3.0.0"
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=3.3.0"
 
 dependencies:
-  adaptive_icons: ^1.0.0
-  assorted_layout_widgets: ^6.1.1
+  adaptive_icons: ^1.2.1
+  assorted_layout_widgets: ^7.0.0
   collection: ^1.16.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.0.1
+  flutter_bloc: ^8.1.1
   resolve_font_height: ^1.0.2
 
 dev_dependencies:
