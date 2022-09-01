@@ -6,7 +6,6 @@ import 'package:flutter_adaptive/flutter_adaptive.dart' as adaptive;
 import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/config/config.dart';
 import 'package:flutter_adaptive/src/l10n/l10n.dart';
-import 'package:flutter_adaptive/src/widgets/flexible_space_bar.dart';
 
 /// This will be called whenever the [adaptive.Route]'s previousPageTitle
 /// needs to be generated.
@@ -132,18 +131,12 @@ class Route extends StatelessWidget {
       );
     }
 
-    const double expandedHeight = kToolbarHeight + 41;
-
     Widget body = CustomScrollView(
       slivers: [
-        SliverAppBar(
+        SliverAppBar.large(
           pinned: true,
+          title: Text(title),
           actions: actions,
-          expandedHeight: expandedHeight,
-          flexibleSpace: CustomFlexibleSpaceBar(
-            title: title,
-            expandedHeight: expandedHeight,
-          ),
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         ),
         SliverPersistentHeader(
@@ -161,6 +154,11 @@ class Route extends StatelessWidget {
     );
 
     if (onRefresh != null) {
+      /// The [SliverAppBar.large]'s expandedHeight.
+      ///
+      /// See [<flutter root>/packages/flutter/lib/src/material/app_bar.dart].
+      const double expandedHeight = 152;
+
       double edgeOffset = expandedHeight + 1; // Divider
 
       if (top != null) {
