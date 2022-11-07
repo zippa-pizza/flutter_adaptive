@@ -1,3 +1,7 @@
+## 3.0.1
+
+- Fix wrong doc comment
+
 ## 3.0.0
 
 > This version requires Flutter 3.3.0 or greater
