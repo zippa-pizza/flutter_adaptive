@@ -80,8 +80,9 @@ class DialogAction {
 
   final void Function(BuildContext)? onPressed;
 
-  /// Only honored on Android
   final bool isPrimary;
+
+  /// Only honored on iOS
   final bool isDestructive;
 
   const DialogAction({
