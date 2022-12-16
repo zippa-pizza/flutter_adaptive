@@ -79,7 +79,7 @@ class ListTile extends StatelessWidget {
                 return DefaultTextStyle(
                   style: DefaultTextStyle.of(context).style,
                   maxLines: double.maxFinite.toInt(),
-                  child: title!,
+                  child: title ?? const SizedBox(),
                 );
               },
             ),
