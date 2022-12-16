@@ -1,3 +1,7 @@
+## 3.0.2
+
+- Fixed an error in `ListTile` when `title` was `null`
+
 ## 3.0.1
 
 - Fix wrong doc comment
