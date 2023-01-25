@@ -40,7 +40,7 @@ class ExpansionTile extends StatelessWidget {
     final Widget titleWidget = Text(
       title,
       style: TextStyle(
-        color: material.Theme.of(context).textTheme.subtitle1!.color,
+        color: material.Theme.of(context).textTheme.titleMedium!.color,
       ),
     );
 
@@ -53,7 +53,7 @@ class ExpansionTile extends StatelessWidget {
     if (subtitleWidget != null) {
       subtitleWidget = DefaultTextStyle(
         style: DefaultTextStyle.of(context).style.copyWith(
-              color: material.Theme.of(context).textTheme.caption!.color,
+              color: material.Theme.of(context).textTheme.bodySmall!.color,
             ),
         child: subtitleWidget,
       );

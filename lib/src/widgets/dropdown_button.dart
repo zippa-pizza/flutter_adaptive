@@ -50,8 +50,8 @@ class DropdownButton<T> extends StatelessWidget {
             bottom: 4,
           ),
           foregroundColor: initialItem != null
-              ? material.Theme.of(context).textTheme.bodyText2!.color
-              : material.Theme.of(context).textTheme.caption!.color,
+              ? material.Theme.of(context).textTheme.bodyMedium!.color
+              : material.Theme.of(context).textTheme.bodySmall!.color,
           backgroundColor: material.Colors.transparent,
           onPressed: () async {
             int selectedIndex =
@@ -74,7 +74,7 @@ class DropdownButton<T> extends StatelessWidget {
                       style: TextStyle(
                         color: material.Theme.of(context)
                             .textTheme
-                            .bodyText2!
+                            .bodyMedium!
                             .color,
                       ),
                     ),

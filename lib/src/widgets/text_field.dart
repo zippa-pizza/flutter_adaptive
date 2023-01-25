@@ -112,7 +112,7 @@ class TextField extends StatelessWidget {
                         error ?? '',
                         style: TextStyle(
                           fontSize: 12,
-                          color: material.Theme.of(context).errorColor,
+                          color: material.Theme.of(context).colorScheme.error,
                         ),
                       ),
                     ),

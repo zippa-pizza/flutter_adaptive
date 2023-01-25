@@ -36,7 +36,7 @@ class SearchTextField extends StatelessWidget {
           placeholder: hintText,
           onChanged: onChanged,
           onSubmitted: onSubmitted,
-          style: TextStyle(color: Theme.of(context).textTheme.subtitle1!.color),
+          style: TextStyle(color: Theme.of(context).textTheme.titleMedium!.color),
         ),
       );
     }
