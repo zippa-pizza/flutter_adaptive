@@ -1,3 +1,7 @@
+## 4.0.1
+
+- Format files
+
 ## 4.0.0
 
 > This version requires Flutter 3.7.0 or greater
