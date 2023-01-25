@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:flutter_adaptive/platform.dart';
 import 'package:flutter_adaptive/src/config/config.dart';
-import 'package:flutter_adaptive/src/widgets/cupertino_list_tile.dart';
 
 /// An adaptive list tile.
 ///
