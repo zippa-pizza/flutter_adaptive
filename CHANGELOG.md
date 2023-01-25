@@ -1,3 +1,11 @@
+## 4.0.0
+
+> This version requires Flutter 3.7.0 or greater
+
+**BREAKING CHANGES:**
+
+- Add support for Flutter 3.7.0
+
 ## 3.0.2
 
 - Fixed an error in `ListTile` when `title` was `null`
