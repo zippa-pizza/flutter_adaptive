@@ -12,13 +12,13 @@ platforms:
   web:
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
-  flutter: ">=3.3.0"
+  sdk: ">=2.19.0 <4.0.0"
+  flutter: ">=3.7.0"
 
 dependencies:
-  adaptive_icons: ^1.2.1
+  adaptive_icons: ^1.4.0
   assorted_layout_widgets: ^7.0.0
-  collection: ^1.16.0
+  collection: ^1.17.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
