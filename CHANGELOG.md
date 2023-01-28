@@ -1,3 +1,7 @@
+## 4.0.2
+
+- Fixed `use_build_context_synchronously` lint warning
+
 ## 4.0.1
 
 - Format files
