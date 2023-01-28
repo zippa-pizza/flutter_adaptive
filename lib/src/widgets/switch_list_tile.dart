@@ -63,7 +63,8 @@ class SwitchListTile extends StatelessWidget {
 
     await onChanged?.call(value);
 
-    // ignore: use_build_context_synchronously
-    context.read<SimpleValueBloc<bool>>().change(false);
+    if (context.mounted) {
+      context.read<SimpleValueBloc<bool>>().change(false);
+    }
   }
 }
