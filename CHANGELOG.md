@@ -1,3 +1,7 @@
+## 4.1.0
+
+- `Route` no longer shows a `Divider` under the app bar
+
 ## 4.0.2
 
 - Fixed `use_build_context_synchronously` lint warning
