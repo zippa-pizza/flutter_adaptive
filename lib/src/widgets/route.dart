@@ -106,13 +106,7 @@ class Route extends StatelessWidget {
                       ),
                       SliverPersistentHeader(
                         pinned: true,
-                        delegate: _SliverTopDelegate(
-                          top ??
-                              const PreferredSize(
-                                preferredSize: Size.fromHeight(1),
-                                child: Divider(height: 1),
-                              ),
-                        ),
+                        delegate: _SliverTopDelegate(top),
                       ),
                       if (onRefresh != null)
                         CupertinoSliverRefreshControl(
@@ -141,13 +135,7 @@ class Route extends StatelessWidget {
         ),
         SliverPersistentHeader(
           pinned: true,
-          delegate: _SliverTopDelegate(
-            top ??
-                const PreferredSize(
-                  preferredSize: Size.zero,
-                  child: SizedBox(),
-                ),
-          ),
+          delegate: _SliverTopDelegate(top),
         ),
         child,
       ],
@@ -159,7 +147,7 @@ class Route extends StatelessWidget {
       /// See [<flutter root>/packages/flutter/lib/src/material/app_bar.dart].
       const double expandedHeight = 152;
 
-      double edgeOffset = expandedHeight + 1; // Divider
+      double edgeOffset = expandedHeight;
 
       if (top != null) {
         edgeOffset += top!.preferredSize.height;
@@ -187,14 +175,20 @@ class Route extends StatelessWidget {
 }
 
 class _SliverTopDelegate extends SliverPersistentHeaderDelegate {
-  _SliverTopDelegate(this.widget);
-
   final PreferredSizeWidget widget;
 
+  _SliverTopDelegate(PreferredSizeWidget? widget)
+      : widget = widget ??
+            const PreferredSize(
+              preferredSize: Size.zero,
+              child: SizedBox(),
+            );
+
   @override
-  double get minExtent => widget.preferredSize.height + 1;
+  double get minExtent => widget.preferredSize.height;
+
   @override
-  double get maxExtent => widget.preferredSize.height + 1;
+  double get maxExtent => widget.preferredSize.height;
 
   @override
   Widget build(
@@ -204,12 +198,7 @@ class _SliverTopDelegate extends SliverPersistentHeaderDelegate {
   ) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      child: Column(
-        children: [
-          widget,
-          const Divider(height: 1),
-        ],
-      ),
+      child: widget,
     );
   }
 
